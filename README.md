@@ -74,10 +74,20 @@ See the full example in [kotlin-logging-example-maven](https://github.com/MicroU
 ### Gradle
 ```Groovy
 implementation 'io.github.microutils:kotlin-logging-jvm:2.0.10'
+// must also pull in an underlying logging framework:
+
+// implementation 'org.slf4j:slf4j-simple:1.x.x' // quick start -- logs only to stdout -- not for production
+
+// implementation 'ch.qos.logback:logback-classic:1.x.x'  // logback -- a more robust, production-ready option
+
+// implementation 'org.apache.logging.log4j:log4j-api:2.x.x'  // Apache log4j2 -- another production-ready option
+// implementation 'org.apache.logging.log4j:log4j-core:2.x.x'
+
 ```
 or
 ```Groovy
 implementation 'io.github.microutils:kotlin-logging:1.12.5'
+// again, must also pull in an underlying logging framework... see above example
 ```
 
 Alternatively, download the JAR from [github](https://github.com/MicroUtils/kotlin-logging/releases/latest) or [bintray](https://dl.bintray.com/microutils/kotlin-logging/io/github/microutils/kotlin-logging/) or [maven-central](http://repo1.maven.org/maven2/io/github/microutils/kotlin-logging/).
